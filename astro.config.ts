@@ -14,7 +14,7 @@ export default defineConfig({
 	integrations: [
 		tailwind({
 			config: {
-				applyBaseStyles: false,
+				applyBaseStyles: true,
 				path: "./tailwind.config.js"
 			}
 		}),

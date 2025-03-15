@@ -1,3 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --theme-color: rgb(0, 255, 170);
+    --theme-color-shadow: rgba(0, 255, 170, 0.5)
+}
+
+.button {
+    display: inline-block;
+    border: 2px solid var(--theme-color);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.2rem;
+    width: fit-content;
+    box-shadow: 0px 0px 10px var(--theme-color-shadow);
+    transition: box-shadow linear 200ms, transform linear 200ms;
+    user-select: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.button:hover {
+    box-shadow: 0 0 0 var(--theme-color-shadow);
+    transform: scale(95%);
+    cursor: pointer;
+}
+.button:active {
+    transform: scale(90%);
+}
+
+.button > * {
+    width: fit-content;
+    height: fit-content;
+}
+
+.input_text {
+    margin: 0 1rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.2rem;
+    border: 1px solid var(--theme-color);
+
+    width: auto;
+    transition: all 0.3s;
+}
+.with_label {
+    margin-top: 2rem;
+}
+
+.input_label {
+    display: block;
+    transition: all 0.3s;
+    transform: translateY(-3.75rem);
+    margin-left: 1.5rem;
+    width: fit-content;
+    user-select: none;
+}
+
+.input_text:placeholder-shown + .input_label {
+    margin-left: 1.5em;
+    border-top: 0px transparent;
+    opacity: 80;
+    visibility: show;
+    -webkit-transform: translateY(-2.2rem);
+    transform: translateY(-2.2rem);
+  }
+
+.input_text:focus:placeholder-shown + .input_label {
+    opacity: 0.20;
+
+}
+
+.input_text:focus  {
+    outline: none;
+    box-shadow: 0px 4px 0px 0px var(--theme-color-shadow);
+} 

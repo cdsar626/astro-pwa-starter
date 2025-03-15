@@ -2,10 +2,11 @@
 	"compilerOptions": {
 		"target": "ESNext",
 		"module": "ESNext",
-		"moduleResolution": "node",
+		"moduleResolution": "Node",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"types": ["astro/client"],
+		"jsx": "preserve",
 		"baseUrl": ".",
 		"paths": {
 			"@globals": ["src/components/global"],
